@@ -1,9 +1,7 @@
 # 팩토리얼 구하기
-
-# loop
 import math
 
-
+# loop
 def factorial(n):
     a=1
     for i in range(n,0,-1):
@@ -12,17 +10,14 @@ def factorial(n):
 
 
 # recursive call
-a = 1
 def fac(n):
-    a = n * (n - 1)
     if(n==1):
-        return a
+        return n
     else:
-        fac(n - 1)
-        print(a)
+        a = n * fac(n-1)
+        return a
 
 
 print('반복문 : '+ str(factorial(5)))
 print('재귀호출 : '+ str(fac(5)))
 print('내장함수 : '+ str(math.factorial(5)))
-
