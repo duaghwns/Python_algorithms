@@ -12,11 +12,9 @@ def factorial(n):
 # recursive call
 def fac(n):
     if(n==1):
-        return n
+        return 1
     else:
-        a = n * fac(n-1)
-        return a
-
+        return n * fac(n-1)
 
 print('반복문 : '+ str(factorial(5)))
 print('재귀호출 : '+ str(fac(5)))
